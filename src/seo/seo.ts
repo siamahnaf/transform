@@ -1,0 +1,91 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "JSON to Dart | A Dart Model Generator",
+    description: "Effortlessly generate Dart entity and model classes from nested JSON objects with nested array and object handling. Simplify your Dart application development with automated toJson and fromJson methods, ensuring clean and structured code for handling nested data models.",
+    keywords: [
+        "Dart entity generation",
+        "Dart model class generator",
+        "Dart recursive JSON parsing",
+        "generate Dart from JSON",
+        "automated Dart toJson",
+        "Dart fromJson generator",
+        "Dart nested object handling",
+        "Dart nested array handling",
+        "Dart entity model creation",
+        "Dart JSON data models",
+        "Dart toJson method generation",
+        "Dart fromJson method generation",
+        "Dart JSON array parsing",
+        "Dart JSON object parsing",
+        "generate Dart classes from JSON",
+        "recursive JSON to Dart",
+        "Dart model class with toJson",
+        "Dart model class with fromJson",
+        "Dart JSON to model",
+        "nested JSON to Dart model",
+        "Dart dynamic field generation",
+        "Dart class generation tool",
+        "Dart data model automation",
+        "convert JSON to Dart",
+        "Dart JSON to class converter",
+        "JSON data to Dart class",
+        "Dart model generator online",
+        "Dart class with JSON handling",
+        "automated Dart code generation",
+        "Dart recursive model generation",
+        "Dart model class automation",
+        "Dart recursive class generation",
+        "Dart entity class with fromJson",
+        "Dart entity class with toJson",
+        "Dart array field handling",
+        "Dart object field handling",
+        "Dart model classes from JSON",
+        "Dart nested field parsing",
+        "generate Dart classes online",
+        "Dart model with nested arrays",
+        "Dart model with nested objects",
+        "automated Dart class generation",
+        "Dart JSON to entity conversion",
+        "convert JSON to Dart models",
+        "Dart model class creation",
+        "Dart JSON field handling",
+        "recursive Dart class generation",
+        "Dart JSON to entity automation",
+        "Dart model class tool",
+        "Dart nested data handling",
+        "automated Dart JSON models",
+        "Dart nested class generation",
+        "Dart field generation tool",
+        "convert JSON to Dart classes"
+    ],
+    generator: "Siam Ahnaf",
+    authors: [{
+        name: "Siam Ahnaf",
+        url: "https://www.siamahnaf.com/"
+    }],
+    creator: "Siam Ahnaf",
+    publisher: "Siam Ahnaf",
+    formatDetection: {
+        email: true,
+        address: false,
+        telephone: true
+    },
+    metadataBase: new URL("https://json-to-dart.siamahnaf.com/"),
+    robots: {
+        index: true,
+        follow: true,
+        nocache: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            noimageindex: false,
+            "max-image-preview": "standard",
+            "max-video-preview": -1,
+            "max-snippet": -1
+        }
+    },
+    alternates: {
+        canonical: "https://json-to-dart.siamahnaf.com/"
+    }
+}
