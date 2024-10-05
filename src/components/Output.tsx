@@ -61,7 +61,7 @@ const Output = ({ entity, model }: Props) => {
     if (formattedEntities.length === 0 && formattedModels.length === 0) return null;
 
     return (
-        <div className="col-span-7">
+        <div className="col-span-7 lg:col-span-7 xxs:col-span-12">
             {errorMessage &&
                 <h4 className="font-semibold text-red-600 text-xl mb-5">{errorMessage}</h4>
             }

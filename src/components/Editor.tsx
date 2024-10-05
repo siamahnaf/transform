@@ -125,7 +125,7 @@ const Editor = ({ setEntity, setModel }: Props) => {
     };
 
     return (
-        <div className="col-span-5">
+        <div className="col-span-5 lg:col-span-5 xxs:col-span-12">
             <h4 className="text-xl font-semibold text-gray-700 mb-2">JSON</h4>
             <div className="border border-solid border-gray-200 rounded-sm overflow-hidden">
                 <CodeMirror
