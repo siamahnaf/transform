@@ -4,8 +4,10 @@ import CodeMirror from "@uiw/react-codemirror";
 import { json } from "@codemirror/lang-json";
 import { EditorView } from "@codemirror/view";
 import { autocompletion } from "@codemirror/autocomplete";
-import camelCase from "camelcase";
 import { eclipseInit } from "@uiw/codemirror-theme-eclipse";
+
+//Utils
+import { camelCase } from "@/Utils/camelCase";
 
 //Components
 import Select from "./Select";
@@ -59,7 +61,7 @@ const Editor = ({ setEntity, setModel }: Props) => {
 
 
         const processField = (key: string, value: any) => {
-            const camelCaseKey = camelCase(key.replaceAll("@", ""));
+            const camelCaseKey = camelCase(key);
             const valueType = typeof value;
 
             if (Array.isArray(value) && value.length > 0) {
@@ -134,6 +136,7 @@ const Editor = ({ setEntity, setModel }: Props) => {
 
     return (
         <div className="col-span-5 lg:col-span-5 xxs:col-span-12">
+            {JSON.stringify(camelCase("Hh"))}
             <h4 className="text-xl font-semibold text-gray-700 mb-2">JSON</h4>
             <div className="border border-solid border-gray-200 rounded-sm overflow-hidden">
                 <CodeMirror
