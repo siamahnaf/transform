@@ -5,6 +5,7 @@ import { json } from "@codemirror/lang-json";
 import { EditorView } from "@codemirror/view";
 import { autocompletion } from "@codemirror/autocomplete";
 import { eclipseInit } from "@uiw/codemirror-theme-eclipse";
+import Link from "next/link";
 
 //Utils
 import { camelCase } from "@/Utils/camelCase";
@@ -177,6 +178,13 @@ const Editor = ({ setEntity, setModel }: Props) => {
                 <button className="bg-purple-600 text-white py-3 rounded-sm" onClick={onGenerate}>
                     Generate Dart
                 </button>
+            </div>
+            <div className="mt-32 text-center">
+                <div className="w-full mx-auto h-[10px] bg-purple-600 mt-6 rounded-sm mb-6" />
+                <h4 className="text-xl font-semibold text-gray-700">Created By Siam Ahnaf</h4>
+                <Link href="https://www.siamahnaf.com/" target="_blank" className="text-[15px] text-purple-600 hover:underline">
+                    www.siamahnaf.com
+                </Link>
             </div>
         </div>
     );
