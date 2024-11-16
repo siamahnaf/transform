@@ -9,6 +9,9 @@ module.exports = {
         xxs: "0px",
         lg: "960px",
       },
+      colors: {
+        main: "#62A92B",
+      }
     },
   },
   plugins: [],

@@ -4,8 +4,9 @@ import CodeMirror from "@uiw/react-codemirror";
 import { json } from "@codemirror/lang-json";
 import { EditorView } from "@codemirror/view";
 import { autocompletion } from "@codemirror/autocomplete";
-import { eclipseInit } from "@uiw/codemirror-theme-eclipse";
+import { vscodeLight } from "@uiw/codemirror-theme-vscode";
 import Link from "next/link";
+import Image from "next/image";
 
 //Utils
 import { camelCase } from "@/Utils/camelCase";
@@ -149,11 +150,7 @@ const Editor = ({ setEntity, setModel }: Props) => {
                     ]}
                     onChange={handleChange}
                     placeholder="Enter JSON here..."
-                    theme={eclipseInit({
-                        settings: {
-                            caret: "black"
-                        }
-                    })}
+                    theme={vscodeLight}
                     style={{ borderRadius: "10px" }}
                 />
             </div>
@@ -175,14 +172,15 @@ const Editor = ({ setEntity, setModel }: Props) => {
             />
             <div className="grid grid-cols-2 gap-5 mt-4">
                 <button className="bg-gray-700 text-white px-8 py-3 flex-1 rounded-sm" onClick={onReset}>Clear JSON</button>
-                <button className="bg-purple-600 text-white py-3 rounded-sm" onClick={onGenerate}>
+                <button className="bg-main text-white py-3 rounded-sm" onClick={onGenerate}>
                     Generate Dart
                 </button>
             </div>
             <div className="mt-32 text-center">
-                <div className="w-full mx-auto h-[10px] bg-purple-600 mt-6 rounded-sm mb-6" />
+                <Image src="/logo.png" alt="Logo" width={502} height={133.93} className="w-[180px] mx-auto" />
+                <div className="w-full mx-auto h-[6px] bg-main mt-6 rounded-sm my-4" />
                 <h4 className="text-xl font-semibold text-gray-700">Created By Siam Ahnaf</h4>
-                <Link href="https://www.siamahnaf.com/" target="_blank" className="text-[15px] text-purple-600 hover:underline">
+                <Link href="https://www.siamahnaf.com/" target="_blank" className="text-[15px] text-main hover:underline">
                     www.siamahnaf.com
                 </Link>
             </div>

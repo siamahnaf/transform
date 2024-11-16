@@ -5,7 +5,7 @@ import { StreamLanguage } from "@codemirror/language";
 import { dart } from "@codemirror/legacy-modes/mode/clike";
 import { EditorView } from "@codemirror/view";
 import init, { format } from "@wasm-fmt/dart_fmt";
-import { eclipseInit } from "@uiw/codemirror-theme-eclipse";
+import { vscodeLight } from "@uiw/codemirror-theme-vscode";
 
 //Components
 import CopyToClipboard from "./CopyToClipboard";
@@ -78,11 +78,7 @@ const Output = ({ entity, model }: Props) => {
                                 StreamLanguage.define(dart),
                                 EditorView.lineWrapping
                             ]}
-                            theme={eclipseInit({
-                                settings: {
-                                    caret: "black"
-                                }
-                            })}
+                            theme={vscodeLight}
                             style={{ borderRadius: "10px" }}
                         />
                         <CopyToClipboard item={item} />
@@ -102,11 +98,7 @@ const Output = ({ entity, model }: Props) => {
                                 StreamLanguage.define(dart),
                                 EditorView.lineWrapping
                             ]}
-                            theme={eclipseInit({
-                                settings: {
-                                    caret: "black"
-                                }
-                            })}
+                            theme={vscodeLight}
                             style={{ borderRadius: "10px" }}
                         />
                         <CopyToClipboard item={item} />
