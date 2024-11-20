@@ -10,9 +10,10 @@ import Image from "next/image";
 
 //Utils
 import { camelCase } from "@/Utils/camelCase";
+import { upperCamelCase } from "@/Utils/upperCamelCase";
 
 //Components
-import Select from "./Select";
+import Select from "../UI/Select";
 
 //Interface
 interface Props {
@@ -67,7 +68,7 @@ const Editor = ({ setEntity, setModel }: Props) => {
             const valueType = typeof value;
 
             if (Array.isArray(value) && value.length > 0) {
-                const nestedClassName = `${capitalize(camelCaseKey)}`;
+                const nestedClassName = `${upperCamelCase(camelCaseKey)}`;
                 const nestedClass = generateDartClasses(value, nestedClassName);
                 nestedEntities.push(...nestedClass.entityClasses);
                 nestedModels.push(...nestedClass.modelClasses);
@@ -78,7 +79,7 @@ const Editor = ({ setEntity, setModel }: Props) => {
                     `${camelCaseKey}: map['${key}'] != null ? List<${nestedClassName}Model>.from((map['${key}'] as List<dynamic>).map<${nestedClassName}Model?>((x) => ${nestedClassName}Model.fromJson(x as Map<String, dynamic>))) : null,`
                 );
             } else if (valueType === 'object' && value !== null) {
-                const nestedClassName = `${capitalize(camelCaseKey)}`;
+                const nestedClassName = `${upperCamelCase(camelCaseKey)}`;
                 const nestedClass = generateDartClasses(value, nestedClassName);
                 nestedEntities.push(...nestedClass.entityClasses);
                 nestedModels.push(...nestedClass.modelClasses);
@@ -116,24 +117,19 @@ const Editor = ({ setEntity, setModel }: Props) => {
             processField(key, jsonObj[key]);
         }
 
-        const entityClass = `class ${className} {\n  ${entityFields.join('\n  ')}\n\n  ${className}({\n    ${entityFields
+        const entityClass = `class ${upperCamelCase(className)} {\n  ${entityFields.join('\n  ')}\n\n  ${upperCamelCase(className)}({\n    ${entityFields
             .map((field) => `this.${field.split('? ')[1].replace(';', ',')}`)
             .join('\n    ')}\n  });\n}`;
 
-        const modelClass = `class ${className}Model extends ${className} {\n  ${className}Model({\n    ${modelFields.join(
+        const modelClass = `class ${upperCamelCase(className)}Model extends ${upperCamelCase(className)} {\n  ${upperCamelCase(className)}Model({\n    ${modelFields.join(
             '\n    '
         )}\n  });\n\n  Map<String, dynamic> toJson() {\n    return <String, dynamic>{\n      ${toJsonFields.join(
             '\n      '
-        )}\n    };\n  }\n\n  factory ${className}Model.fromJson(Map<String, dynamic> map) {\n    return ${className}Model(\n      ${fromJsonFields.join(
+        )}\n    };\n  }\n\n  factory ${upperCamelCase(className)}Model.fromJson(Map<String, dynamic> map) {\n    return ${upperCamelCase(className)}Model(\n      ${fromJsonFields.join(
             '\n      '
         )}\n    );\n  }\n}`;
 
         return { entityClasses: [entityClass, ...nestedEntities], modelClasses: [modelClass, ...nestedModels] };
-    };
-
-    //Helpers
-    const capitalize = (str: string) => {
-        return str.replaceAll("@", "").charAt(0).toUpperCase() + str.slice(1);
     };
 
     return (

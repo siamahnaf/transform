@@ -8,7 +8,7 @@ import init, { format } from "@wasm-fmt/dart_fmt";
 import { vscodeLight } from "@uiw/codemirror-theme-vscode";
 
 //Components
-import CopyToClipboard from "./CopyToClipboard";
+import CopyToClipboard from "../UI/CopyToClipboard";
 
 //Interface
 interface Props {
