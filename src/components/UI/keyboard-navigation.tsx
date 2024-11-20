@@ -42,6 +42,7 @@ export const useKeyboardNavigation = (
             const optionElement = ref.current.children[cursor] as HTMLElement;
             optionElement?.scrollIntoView({ block: "nearest" });
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [cursor]);
 
     useEffect(() => {
@@ -49,6 +50,7 @@ export const useKeyboardNavigation = (
         return () => {
             window.removeEventListener("keydown", handleKeyDown);
         };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [cursor, list, isOpen]);
 
     return { cursor, setCursor, ref };

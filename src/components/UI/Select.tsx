@@ -72,10 +72,12 @@ const Select = ({
             setValue(options.find((item) => item.value === value)?.label || "");
             setSelect(value);
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [value]);
 
     useEffect(() => {
         setList(options);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [options]);
 
     return (

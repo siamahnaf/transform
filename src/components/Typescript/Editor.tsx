@@ -122,7 +122,7 @@ const Editor = ({ setTypes }: Props) => {
                 placeholder="Your interface name"
                 onChange={(e) => setName(e.target.value)}
             />
-            <h4 className="text-base text-gray-600 my-2">If you don't want to add &quot;export&quot; keyword, select &quot;no&quot;</h4>
+            <h4 className="text-base text-gray-600 my-2">If you don&apos;t want to add &quot;export&quot; keyword, select &quot;no&quot;</h4>
             <Select
                 id="selectType"
                 value={type}
