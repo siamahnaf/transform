@@ -1,4 +1,9 @@
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Transform | A Typescript Type Generator"
+}
 
 import Main from "@/components/Typescript/mains";
 

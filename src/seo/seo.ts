@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "JSON to Dart | A Dart Model Generator",
-    description: "Effortlessly generate Dart entity and model classes from nested JSON objects with nested array and object handling. Simplify your Dart application development with automated toJson and fromJson methods, ensuring clean and structured code for handling nested data models.",
+    title: "Transform | A Dart Model Generator",
+    description: "Effortlessly generate Dart entity and model classes from nested JSON objects with nested array and object handling as well as typescript interface class. Simplify your Dart application development with automated toJson and fromJson methods, ensuring clean and structured code for handling nested data models.",
     keywords: [
         "Dart entity generation",
         "Dart model class generator",
