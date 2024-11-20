@@ -62,6 +62,7 @@ const Select = ({
         if (value && !open) {
             if (!select) setValue("");
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [open]);
 
     useEffect(() => {
