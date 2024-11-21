@@ -6,6 +6,9 @@ import "./globals.css";
 //Metadata
 import { metadata as MetadataAPI } from "@/seo/seo";
 
+//Badge
+import Badges from "@/components/UI/Badges";
+
 //Fonts
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -31,6 +34,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
         <Analytics />
+        <Badges />
       </body>
     </html>
   );

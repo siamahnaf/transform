@@ -4,11 +4,11 @@
   <img alt="Siam Ahnaf" src="https://res.cloudinary.com/dub0dpenl/image/upload/v1731780152/Personal%20Logo/logo-dark_qqwrqu.png" height="auto" width="240">
 </picture>
 
-# JSON to Dart
-Effortlessly generate Dart entity and model classes from nested JSON objects with nested array and object handling. Simplify your Dart application development with automated toJson and fromJson methods, ensuring clean and structured code for handling nested data models.
+# Transform
+You can easily convert JSON data into Dart entity and model classes separately, ensuring a clean separation of concerns in your code. For TypeScript, the JSON can be transformed into type definitions with null safety.
 
 ## Visit
-[https://json-to-dart.siamahnaf.com/](https://json-to-dart.siamahnaf.com/)
+[https://transform.siamahnaf.com/](https://transform.siamahnaf.com/)
 
 ## Contribute & Issue
 Contributions are welcome! If you have any feature ideas, please feel free to contribute. Additionally, if you notice any issues with unnecessary Dart model creations or have suggestions for improvements, please create an issue.
