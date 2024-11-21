@@ -1,5 +1,8 @@
 "use client"
-import GitHubCorners from "@uiw/react-github-corners";
+import dynamic from "next/dynamic";
+const GitHubCorners = dynamic(() => import("@uiw/react-github-corners"), {
+    ssr: false
+})
 
 const Badges = () => {
     return (
