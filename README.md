@@ -1,4 +1,8 @@
-<img src="https://res.cloudinary.com/dbjrx698c/image/upload/v1704611347/logo_w4vxp0.png" width="100" height="100" style="display: block; margin: 0 auto;">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://res.cloudinary.com/dub0dpenl/image/upload/v1731780157/Personal%20Logo/logo-white_e6fujz.png">
+  <source media="(prefers-color-scheme: light)" srcset="https://res.cloudinary.com/dub0dpenl/image/upload/v1731780152/Personal%20Logo/logo-dark_qqwrqu.png">
+  <img alt="Siam Ahnaf" src="https://res.cloudinary.com/dub0dpenl/image/upload/v1731780152/Personal%20Logo/logo-dark_qqwrqu.png" height="auto" width="240">
+</picture>
 
 # JSON to Dart
 Effortlessly generate Dart entity and model classes from nested JSON objects with nested array and object handling. Simplify your Dart application development with automated toJson and fromJson methods, ensuring clean and structured code for handling nested data models.
@@ -10,7 +14,11 @@ Effortlessly generate Dart entity and model classes from nested JSON objects wit
 Contributions are welcome! If you have any feature ideas, please feel free to contribute. Additionally, if you notice any issues with unnecessary Dart model creations or have suggestions for improvements, please create an issue.
 
 ## Webinuxs
-<img src="https://res.cloudinary.com/dub0dpenl/image/upload/v1726562110/Personal/xbetf83o2drangioe1ia.png" width="100" height="100">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://res.cloudinary.com/dub0dpenl/image/upload/v1732166724/Webinuxs/WebinuxsLogo1_Recovered_v9ganh.png">
+  <source media="(prefers-color-scheme: light)" srcset="https://res.cloudinary.com/dub0dpenl/image/upload/v1732166723/Webinuxs/WebinuxsLogo2_Recovered_ynnf90.png">
+  <img alt="Siam Ahnaf" src="https://res.cloudinary.com/dub0dpenl/image/upload/v1732166723/Webinuxs/WebinuxsLogo2_Recovered_ynnf90.png" height="auto" width="140">
+</picture> <br/>
 Explore Webinuxs, where we bring your web and mobile app applications to life at competitive prices. Our dedicated team is committed to delivering exceptional quality and innovative web and mobile application as your needs. visit https://webinuxs.com/
 
 ## Support
