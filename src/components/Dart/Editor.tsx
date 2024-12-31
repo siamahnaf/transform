@@ -45,7 +45,7 @@ const Editor = ({ setEntity, setModel }: Props) => {
             setEntity(entityClasses);
             setModel(modelClasses);
         } catch (error) {
-            alert("The json provided has syntax errors!");
+            alert("The json provided has syntax errorsssss!");
         }
     }
 
@@ -104,7 +104,8 @@ const Editor = ({ setEntity, setModel }: Props) => {
                 } else {
                     fieldType = 'dynamic';
                 }
-                entityFields.push(`final ${fieldType}? ${camelCaseKey};`);
+                const nullableSuffix = fieldType === 'dynamic' ? '' : '?';
+                entityFields.push(`final ${fieldType}${nullableSuffix} ${camelCaseKey};`);
                 modelFields.push(`super.${camelCaseKey},`);
                 toJsonFields.push(`'${key}': ${camelCaseKey},`);
                 fromJsonFields.push(
@@ -118,7 +119,7 @@ const Editor = ({ setEntity, setModel }: Props) => {
         }
 
         const entityClass = `class ${upperCamelCase(className)} {\n  ${entityFields.join('\n  ')}\n\n  ${upperCamelCase(className)}({\n    ${entityFields
-            .map((field) => `this.${field.split('? ')[1].replace(';', ',')}`)
+            .map((field) => `this.${field.split('? ')?.[1]?.replace(';', ',')}`)
             .join('\n    ')}\n  });\n}`;
 
         const modelClass = `class ${upperCamelCase(className)}Model extends ${upperCamelCase(className)} {\n  ${upperCamelCase(className)}Model({\n    ${modelFields.join(
